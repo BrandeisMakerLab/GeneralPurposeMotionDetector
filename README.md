@@ -4,8 +4,8 @@ ABOUT:
 This is a prototype of a general purpose module to use gyroscope measurements for playing different vibration effects. The base system includes a MPU_6000 gyroscope/accelerometer, an Adafruit tactor controller, and an Arduino Uno. It reads and calibrates incoming acceleration values in order to provide tactile feedback to the user regarding acceleration. The ultimate goal is to collect additional data for motion experiments, and to see how the stimulus affects participants' ability to complete tasks.
 
 HOW TO USE:
-  1. Open the Accelerometer_Front_End Example file from the examples folder.
-  2. The system currently uses maximum and minimum calibration values that are entered into the calibration function.
+  1. Open the Accelerometer_Front_EndExample file from the examples folder.
+  2. The system currently uses maximum and minimum calibration values that are entered into the calibration function on line 27.
   3. After doing this, upload the revised program to the board.
   4. If you open the serial monitor, the board should constantly print "NOT MOVING" until it is moved in any direction.
   5. Move the board around to make it play different effects. It will begin playing an effect when acceleration of magnitude 0.02 or larger is detected and continue to do this until the board is held still or detects acceleration in another direction.
