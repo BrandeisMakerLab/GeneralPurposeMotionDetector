@@ -1,0 +1,41 @@
+/*Joseph Picard, Brandeis University; Ashton-Graybiel Spatial Orientation Lab
+
+  Purpose: General purpose accelerometer/gyroscope to tactor effect controller.
+
+  Email: jcpicard32@gmail.com
+
+  Rights: Copyright (C) 2019 Joseph Picard
+          License is GPL-3.0, included in License.txt of this project.
+
+Circuit:
+MPU6000 sensor attached to pins  10 - 13:
+CSB: pin 10
+MOSI: pin 11
+MISO: pin 12
+SCK: pin 13 2019/08/09*/
+
+//includes the libraries of code necessary to make this one work
+#include <Accelerometer_Front_End.h>
+
+//The object used to interfact with the class
+Accelerometer_Front_End accelerometer_front_end;
+
+//TODO: EXPLAIN WHAT METHOD DOES
+void setup() {
+  Serial.begin(9600);
+  accelerometer_front_end.begin();
+  accelerometer_front_end.setCalibrationValues (1, 20000, 20000, 1000000);
+  accelerometer_front_end.initialize();
+  accelerometer_front_end.setThreshold(0.02);
+  
+}
+
+//TODO: EXPLAIN WHAT METHOD DOES
+void loop() {
+ accelerometer_front_end.getAcceleration();
+ accelerometer_front_end.getGyro();
+ delay(100);
+ accelerometer_front_end.findEffect();
+ accelerometer_front_end.print();
+}
+

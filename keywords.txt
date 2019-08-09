@@ -1,0 +1,21 @@
+//Generates ARDUINO KEYWORDS for SensorInterface class
+SensorInterface	KEYWORD1
+begin	KEYWORD2
+getXAccelerometerCounts	KEYWORD2
+getYAccelerometerCounts	KEYWORD2
+getZAccelerometerCounts	KEYWORD2
+getXGyroCounts	KEYWORD2
+getYGyroCounts	KEYWORD2
+getZGyroCounts	KEYWORD2
+MPU6000_Init	KEYWORD2
+
+//Generates ARDUINO KEYWORDS for Accelerometer_Front_End class
+Accelerometer_Front_End	KEYWORD1
+begin	KEYWORD2
+setCalibrationValues 	KEYWORD2
+initialize	KEYWORD2
+setThreshold	KEYWORD2
+getAcceleration	KEYWORD2
+getGyro	KEYWORD2
+findEffect	KEYWORD2
+print	KEYWORD2
